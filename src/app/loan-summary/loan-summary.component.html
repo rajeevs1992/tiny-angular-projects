@@ -1,7 +1,7 @@
 <div class="card">
   <h5 class="card-header">Loan summary</h5>
   <div class="card-body">
-    <p class="card-text">Total tenure : {{ loanDetails.totalTenure/12 |number:'1.0-0' }} years, {{ loanDetails.totalTenure%12}} months</p>
+    <p class="card-text">Total tenure : {{ loanDetails.tenureDisplayValue.years }} years, {{ loanDetails.tenureDisplayValue.months }} months</p>
     <p class="card-text">Total interest paid : {{ loanDetails.totalInterestPaid|number }}</p>
     <p class="card-text">Total amount paid : {{ loanDetails.totalInterestPaid+loanDetails.loanAmount|number }}</p>
   </div>

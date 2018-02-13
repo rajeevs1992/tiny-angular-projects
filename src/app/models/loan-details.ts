@@ -52,6 +52,11 @@ export class LoanDetails {
 
     public totalInterestPaid: number;
     public totalTenure: number;
+    public get tenureDisplayValue() {
+        let years = Math.floor(this.totalTenure / 12);
+        let months = this.totalTenure % 12;
+        return { years, months }
+    }
 
     public installments: Array<Installment>;
     public computeAndSetInstallments() {
