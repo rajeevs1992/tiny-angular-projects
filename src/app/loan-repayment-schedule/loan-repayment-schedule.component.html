@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Months</th>
+        <th scope="col">EMI</th>
+        <th class="d-none d-sm-table-cell" scope="col">Interest</th>
+        <th class="d-none d-sm-table-cell" scope="col">Principal</th>
+        <th class="d-none d-sm-table-cell" scope="col">Outstanding Principal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let installment of loanDetails.installments' [ngClass]='{"table-warning":installment.emi!=loanDetails.emi}'>
+        <td>{{ installment.month }}</td>
+        <td>
+          <input type="number" class="form-control" (change)='onUpdateEmi()' [(ngModel)]='installment.emi' />
+        </td>
+        <td class="d-none d-sm-table-cell">{{ installment.interest | number }}</td>
+        <td class="d-none d-sm-table-cell">{{ installment.principal | number }}</td>
+        <td class="d-none d-sm-table-cell">{{ installment.outstanding | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
