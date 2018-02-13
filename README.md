@@ -18,3 +18,6 @@ Your loan gets summarised in a next widget that is always shown, in a way that y
 ### Responsive design
 
 In an almost fully mobile world, it makes sense to work on making the site fully usable on mobile devices as well
+
+## Live Demo
+You can find a live version of this application [here](http://rajeevs1992.github.io/emi-calculator/).
